@@ -1,3 +1,7 @@
+local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
+local event = "BufWritePre"
+local async = event == "BufWritePost"
+
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
@@ -7,6 +11,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
       vim.keymap.set("n", "<Leader>f", function()
         vim.lsp.buf.format({ bufnr = bufnr })
       end, { buffer = bufnr, desc = "LSP: [F]ormat" })
+      vim.api.nvim_clear_autocmds({ buffer = bufnr, group = group })
+      vim.api.nvim_create_autocmd(event, {
+        buffer = bufnr,
+        group = group,
+        callback = function()
+          vim.lsp.buf.format({ bufnr = bufnr, async = async })
+        end,
+        desc = "LSP: format on save",
+      })
     end
 
     local map = function(keys, func, desc, mode)
