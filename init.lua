@@ -17,6 +17,7 @@ require('plugin-config/which-key')
 require('plugin-config/telescope')
 require('plugin-config/treesitter')
 require('plugin-config/trouble')
+require('plugin-config/nvim-surround')
 
 --Language servers
 require('language-servers/lua')
