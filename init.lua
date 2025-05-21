@@ -20,3 +20,4 @@ require('plugin-config/trouble')
 
 --Language servers
 require('language-servers/lua')
+require('language-servers/python')

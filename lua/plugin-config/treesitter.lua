@@ -10,6 +10,7 @@ require("nvim-treesitter.configs").setup({
     "query",
     "markdown",
     "markdown_inline",
+    "python",
   },
   highlight = {
     enable = true,
