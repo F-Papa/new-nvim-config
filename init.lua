@@ -6,6 +6,7 @@ vim.wo.relativenumber = true
 vim.wo.number = true -- Ensure absolute line numbers are also displayed
 
 require('appearance')
+require('keymaps')
 require('lsp-attach')
 require('code-completion')
 
