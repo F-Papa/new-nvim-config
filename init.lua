@@ -19,6 +19,7 @@ require('plugin-config/treesitter')
 require('plugin-config/trouble')
 require('plugin-config/nvim-surround')
 require('plugin-config/autopairs')
+require('plugin-config/indent-blankline')
 
 --Language servers
 require('language-servers/lua')
