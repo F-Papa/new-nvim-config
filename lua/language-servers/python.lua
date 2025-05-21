@@ -1,15 +1,15 @@
-vim.lsp.config['pyls'] = {
-  cmd = { 'basedpyright-langserver', '--stdio' },
-  filetypes = { 'python' },
+vim.lsp.config["pyls"] = {
+  cmd = { "basedpyright-langserver", "--stdio" },
+  filetypes = { "python" },
   settings = {
     basedpyright = {
       analysis = {
         autoSearchPaths = true,
         useLibraryCodeForTypes = true,
-        diagnosticMode = 'openFilesOnly',
+        diagnosticMode = "openFilesOnly",
       },
     },
   },
 }
 
-vim.lsp.enable('pyls')
+vim.lsp.enable("pyls")

@@ -3,7 +3,7 @@ return require("packer").startup(function(use)
   use({
     "nvim-tree/nvim-tree.lua",
     requires = {
-      "nvim-tree/nvim-web-devicons"
+      "nvim-tree/nvim-web-devicons",
     },
   })
   use("hrsh7th/nvim-cmp")
@@ -25,4 +25,5 @@ return require("packer").startup(function(use)
   use("kylechui/nvim-surround")
   use("windwp/nvim-autopairs")
   use("lukas-reineke/indent-blankline.nvim")
+  use("nvimtools/none-ls.nvim")
 end)

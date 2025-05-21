@@ -1,15 +1,15 @@
-vim.lsp.config['luals'] = {
-  cmd = { 'lua-language-server' },
-  filetypes = { 'lua' },
+vim.lsp.config["luals"] = {
+  cmd = { "lua-language-server" },
+  filetypes = { "lua" },
   settings = {
     Lua = {
       runtime = {
-        version = 'LuaJIT',
+        version = "LuaJIT",
       },
       diagnostics = {
         globals = {
-          'vim',
-          'require'
+          "vim",
+          "require",
         },
       },
       workspace = {
@@ -22,4 +22,4 @@ vim.lsp.config['luals'] = {
   },
 }
 
-vim.lsp.enable('luals')
+vim.lsp.enable("luals")

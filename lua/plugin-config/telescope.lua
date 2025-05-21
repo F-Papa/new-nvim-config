@@ -3,11 +3,11 @@ require("telescope").setup({
     path_display = { "truncate" },
     layout_config = { height = 0.95, width = 0.95 },
     file_ignore_patterns = {
-      "node_modules",      --javascript/typescript
-      "package.json",      --javascript/typescript
+      "node_modules",   --javascript/typescript
+      "package.json",   --javascript/typescript
       "package-lock.json", --javascript/typescript
-      "__pycache__",       --python
-      "vendor",            --golang
+      "__pycache__",    --python
+      "vendor",         --golang
     },
   },
   extensions = {

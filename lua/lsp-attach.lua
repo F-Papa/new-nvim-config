@@ -1,4 +1,4 @@
-vim.api.nvim_create_autocmd('LspAttach', {
+vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
     local bufnr = vim.api.nvim_get_current_buf()
@@ -29,5 +29,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
     map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
     map("gT", vim.lsp.buf.type_definition, "[G]oto [T]ype definition")
-  end
+  end,
 })

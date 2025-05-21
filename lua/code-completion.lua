@@ -1,5 +1,5 @@
-local cmp = require('cmp')
-local luasnip = require('luasnip')
+local cmp = require("cmp")
+local luasnip = require("luasnip")
 luasnip.config.setup({})
 
 cmp.setup({
@@ -29,7 +29,7 @@ cmp.setup({
     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
     ["<C-f>"] = cmp.mapping.scroll_docs(4),
     ["<C-y>"] = cmp.mapping.confirm({ select = true }),
-    ['<CR>'] = cmp.mapping.confirm { select = true },
+    ["<CR>"] = cmp.mapping.confirm({ select = true }),
     ["<C-Space>"] = cmp.mapping.complete({}),
 
     -- Think of <c-l> as moving to the right of your snippet expansion.
@@ -57,7 +57,7 @@ cmp.setup({
 })
 
 local ls = require("luasnip")
-ls.config.set_config {
+ls.config.set_config({
   history = false,
-  updateevents = "TextChanged, TextChangedI"
-}
+  updateevents = "TextChanged, TextChangedI",
+})

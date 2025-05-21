@@ -4,7 +4,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
-
 --Scrolling
 vim.opt.scrolloff = 5
 
@@ -12,7 +11,6 @@ vim.opt.scrolloff = 5
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
-
 
 vim.cmd("colorscheme tokyonight-moon")
 vim.cmd("highlight LineNr ctermfg=12 guifg=#e6e6e6")
