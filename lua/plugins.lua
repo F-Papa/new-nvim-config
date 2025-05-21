@@ -1,0 +1,17 @@
+return require("packer").startup(function(use)
+  use("wbthomason/packer.nvim")
+  use({
+    "nvim-tree/nvim-tree.lua",
+    requires = {
+      "nvim-tree/nvim-web-devicons"
+    },
+  })
+  use("hrsh7th/nvim-cmp")
+  use("hrsh7th/cmp-nvim-lsp")
+  use("hrsh7th/cmp-path")
+  use("hrsh7th/cmp-buffer")
+  use("L3MON4D3/LuaSnip")
+  use("rafamadriz/friendly-snippets")
+  use("saadparwaiz1/cmp_luasnip")
+  use("folke/tokyonight.nvim")
+end)
