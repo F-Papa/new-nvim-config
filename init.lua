@@ -21,6 +21,7 @@ require("plugin-config/nvim-surround")
 require("plugin-config/autopairs")
 require("plugin-config/indent-blankline")
 require("plugin-config/none-ls")
+require("plugin-config/gitsigns")
 
 --Language servers
 require("language-servers/lua")
