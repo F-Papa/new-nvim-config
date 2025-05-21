@@ -12,6 +12,7 @@ require('code-completion')
 --Plugins
 require('plugins')
 require('plugin-config/nvim-tree')
+require('plugin-config/which-key')
 
 --Language servers
 require('language-servers/lua')
