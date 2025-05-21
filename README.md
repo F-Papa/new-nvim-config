@@ -18,3 +18,7 @@ Neovim v0.11
 
 ### black
 [Site](https://pypi-org.translate.goog/project/black)
+
+### marksman
+[Github](https://github.com/artempyanykh/marksman)
+[Installation](https://github.com/artempyanykh/marksman/releases)

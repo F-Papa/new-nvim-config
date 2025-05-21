@@ -25,3 +25,4 @@ require("plugin-config/none-ls")
 --Language servers
 require("language-servers/lua")
 require("language-servers/python")
+require("language-servers/markdown")
