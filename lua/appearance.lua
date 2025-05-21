@@ -1,12 +1,9 @@
-vim.api.nvim_exec(
-  [[
-  augroup highlight_yank
-    autocmd!
-    autocmd TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=200})
-  augroup END
-]],
-  false
-)
+vim.api.nvim_create_autocmd("TextYankPost", {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
+
 
 --Scrolling
 vim.opt.scrolloff = 5
