@@ -15,3 +15,6 @@ Neovim v0.11
 ### basedpyright
 [Github](https://github.com/DetachHead/basedpyright)
 [Installation](https://docs.basedpyright.com/latest/installation/command-line-and-language-server/)
+
+### black
+[Site](https://pypi-org.translate.goog/project/black)
