@@ -15,4 +15,9 @@ return require("packer").startup(function(use)
   use("saadparwaiz1/cmp_luasnip")
   use("folke/tokyonight.nvim")
   use("folke/which-key.nvim")
+  use({
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.8",
+    requires = { { "nvim-lua/plenary.nvim" } },
+  })
 end)
