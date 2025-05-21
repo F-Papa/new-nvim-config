@@ -8,6 +8,10 @@ Neovim v0.11
 [Github](https://github.com/LuaLS/lua-language-server)
 [Installation](https://luals.github.io/#neovim-install)
 
+### StyLua
+[Github](https://github.com/JohnnyMorganz/StyLua)
+[Installation](https://github.com/JohnnyMorganz/StyLua/releases)
+
 ### basedpyright
 [Github](https://github.com/DetachHead/basedpyright)
 [Installation](https://docs.basedpyright.com/latest/installation/command-line-and-language-server/)
