@@ -24,6 +24,9 @@ Neovim v0.11
 - [Github](https://github.com/artempyanykh/marksman)
 - [Installation](https://github.com/artempyanykh/marksman/releases)
 
+### typescript-language-server
+- [Website](https://www.npmjs.com/package/typescript-language-server/v/0.9.7)
+
 ## Other nice themes
 -- catppuccin/nvim
 -- rose-pine/neovim
