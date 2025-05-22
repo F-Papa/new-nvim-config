@@ -26,3 +26,10 @@ Neovim v0.11
 - [Github](https://github.com/artempyanykh/marksman)
 
 - [Installation](https://github.com/artempyanykh/marksman/releases)
+
+## Other nice themes
+-- catppuccin/nvim
+-- rose-pine/neovim
+-- Yazeed1s/oh-lucy.nvim
+-- EdenEast/nightfox.nvim
+-- AlexvZyl/nordic.nvim
