@@ -29,4 +29,12 @@ return require("packer").startup(function(use)
   use("rebelot/kanagawa.nvim")
   use("lewis6991/gitsigns.nvim")
   use("sschleemilch/slimline.nvim")
+  use({
+    "MeanderingProgrammer/render-markdown.nvim",
+    after = { "nvim-treesitter" },
+    requires = { "echasnovski/mini.icons", opt = true },
+    config = function()
+      require("render-markdown").setup({})
+    end,
+  })
 end)
