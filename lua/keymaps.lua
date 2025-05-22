@@ -1,7 +1,7 @@
 --Quickfix
 vim.keymap.set("n", "<M-j>", ":cnext<CR>")
 vim.keymap.set("n", "<M-k>", ":cprev<CR>")
-vim.keymap.set("n", "<M-o>", ":copen<CR>")
+vim.keymap.set("n", "<M-q>", ":copen<CR>")
 
 --Windows
 vim.keymap.set("n", "<C-h>", "<C-W>h")
