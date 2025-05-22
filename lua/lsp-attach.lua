@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     if client:supports_method("textDocument/formatting") then
       vim.keymap.set("n", "<Leader>f", function()
-        vim.lsp.buf.format({ bufnr = bufnr })
+        vim.lsp.buf.format({ bufnr = bufnr, timeout_ms = 5000 })
       end, { buffer = bufnr, desc = "LSP: [F]ormat" })
       vim.api.nvim_clear_autocmds({ buffer = bufnr, group = group })
       vim.api.nvim_create_autocmd(event, {
