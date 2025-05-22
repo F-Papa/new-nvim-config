@@ -1,15 +1,22 @@
-vim.lsp.config["pyls"] = {
-  cmd = { "basedpyright-langserver", "--stdio" },
+vim.lsp.config["pyright"] = {
+  cmd = { "pyright-langserver", "--stdio" },
+  root_markers = { ".git" },
   filetypes = { "python" },
   settings = {
-    basedpyright = {
+    python = {
       analysis = {
+        -- ignore = { "*" },
         autoSearchPaths = true,
         useLibraryCodeForTypes = true,
-        diagnosticMode = "openFilesOnly",
       },
     },
   },
 }
 
-vim.lsp.enable("pyls")
+vim.lsp.config["ruff"] = {
+  cmd = { "ruff", "server" },
+  filetypes = { "python" },
+}
+
+vim.lsp.enable("pyright")
+vim.lsp.enable("ruff")
