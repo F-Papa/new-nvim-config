@@ -3,6 +3,10 @@ vim.keymap.set("n", "<M-j>", ":cnext<CR>")
 vim.keymap.set("n", "<M-k>", ":cprev<CR>")
 vim.keymap.set("n", "<M-q>", ":copen<CR>")
 
+--Diagnostics
+vim.keymap.set("n", "<leader>dq", vim.diagnostic.setqflist, { desc = "Send Diagnostics to [Q]uickfix" })
+vim.keymap.set("n", "<leader>dl", vim.diagnostic.setloclist, { desc = "Send Diagnostics to [L]oclist" })
+
 --Windows
 vim.keymap.set("n", "<C-h>", "<C-W>h")
 vim.keymap.set("n", "<C-j>", "<C-W>j")
