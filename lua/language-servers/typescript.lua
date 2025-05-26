@@ -1,10 +1,12 @@
-vim.lsp.config["typescript-ls"] = {
-  cmd = { "typescript-language-server", "--stdio" },
+local lspconfig = require("lspconfig")
+local capabilities = require("blink.cmp").get_lsp_capabilities()
+
+lspconfig.ts_ls.setup({
   init_options = {
     preferences = {
       importModuleSpecifierPreference = "relative",
       importModuleSpecifierEnding = "minimal",
     },
   },
-}
-vim.lsp.enable("typescript-ls")
+  capabilities = capabilities,
+})

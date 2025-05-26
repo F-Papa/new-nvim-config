@@ -1,7 +1,6 @@
-vim.lsp.config["markdown_ls"] = {
-  cmd = { "marksman", "server" },
-  filetypes = { "markdown", "markdown.mdx" },
-  root_markers = { ".marksman.toml", ".git" },
-}
+local lspconfig = require('lspconfig')
+local capabilities = require('blink.cmp').get_lsp_capabilities()
 
-vim.lsp.enable("markdown_ls")
+lspconfig.marksman.setup {
+  capabilities = capabilities
+}

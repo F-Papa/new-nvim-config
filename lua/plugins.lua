@@ -37,4 +37,9 @@ return require("packer").startup(function(use)
       require("render-markdown").setup({})
     end,
   })
+  use({
+    "saghen/blink.cmp",
+    tag = "v1.*",
+  })
+  use("neovim/nvim-lspconfig")
 end)
