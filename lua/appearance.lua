@@ -12,4 +12,4 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
-vim.cmd("colorscheme kanagawa-dragon")
+vim.cmd("colorscheme ef-dark")

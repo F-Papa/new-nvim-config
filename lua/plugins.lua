@@ -2,6 +2,7 @@ return require("packer").startup(function(use)
   use("wbthomason/packer.nvim")
   use({
     "nvim-tree/nvim-tree.lua",
+
     requires = {
       "nvim-tree/nvim-web-devicons",
     },
@@ -13,7 +14,6 @@ return require("packer").startup(function(use)
   use("L3MON4D3/LuaSnip")
   use("rafamadriz/friendly-snippets")
   use("saadparwaiz1/cmp_luasnip")
-  use("folke/tokyonight.nvim")
   use("folke/which-key.nvim")
   use({
     "nvim-telescope/telescope.nvim",
@@ -26,7 +26,6 @@ return require("packer").startup(function(use)
   use("windwp/nvim-autopairs")
   use("lukas-reineke/indent-blankline.nvim")
   use("nvimtools/none-ls.nvim")
-  use("rebelot/kanagawa.nvim")
   use("lewis6991/gitsigns.nvim")
   use("sschleemilch/slimline.nvim")
   use({
@@ -44,4 +43,5 @@ return require("packer").startup(function(use)
   use("neovim/nvim-lspconfig")
   use("echasnovski/mini.statusline")
   use("mbbill/undotree")
+  use("oonamo/ef-themes.nvim")
 end)
