@@ -22,7 +22,8 @@ require("plugin-config/autopairs")
 require("plugin-config/indent-blankline")
 require("plugin-config/none-ls")
 require("plugin-config/gitsigns")
-require("plugin-config/slimline")
+require("plugin-config/statusline")
+require("plugin-config/statusline")
 
 --Language servers
 require("language-servers/lua")

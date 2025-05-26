@@ -42,4 +42,5 @@ return require("packer").startup(function(use)
     tag = "v1.*",
   })
   use("neovim/nvim-lspconfig")
+  use("echasnovski/mini.statusline")
 end)
