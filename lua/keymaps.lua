@@ -14,6 +14,10 @@ vim.keymap.set("n", "<C-k>", "<C-W>k")
 vim.keymap.set("n", "<C-l>", "<C-W>l")
 vim.keymap.set("n", "<C-q>", "<C-W>q")
 
+--Scrolling
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
 --Buffers
 vim.keymap.set("n", "<Tab>", ":bnext<CR>")
 vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")
