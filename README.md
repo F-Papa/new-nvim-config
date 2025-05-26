@@ -28,8 +28,8 @@ Neovim v0.11
 - [Website](https://www.npmjs.com/package/typescript-language-server/v/0.9.7)
 
 ## Other nice themes
--- catppuccin/nvim
--- rose-pine/neovim
--- Yazeed1s/oh-lucy.nvim
--- EdenEast/nightfox.nvim
--- AlexvZyl/nordic.nvim
+- catppuccin/nvim
+- rose-pine/neovim
+- Yazeed1s/oh-lucy.nvim
+- EdenEast/nightfox.nvim
+- AlexvZyl/nordic.nvim
