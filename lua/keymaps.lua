@@ -21,3 +21,11 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 --Buffers
 vim.keymap.set("n", "<Tab>", ":bnext<CR>")
 vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")
+
+--Terminal
+vim.keymap.set("t", "<C-h>", "<C-\\><C-n><C-W>h")
+vim.keymap.set("t", "<C-j>", "<C-\\><C-n><C-W>j")
+vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-W>k")
+vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-W>l")
+vim.keymap.set("t", "<C-q>", "<C-\\><C-n><C-W>q")
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
