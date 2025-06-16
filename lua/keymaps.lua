@@ -29,3 +29,7 @@ vim.keymap.set("t", "<C-k>", "<C-\\><C-n><C-W>k")
 vim.keymap.set("t", "<C-l>", "<C-\\><C-n><C-W>l")
 vim.keymap.set("t", "<C-q>", "<C-\\><C-n><C-W>q")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+--Highlight
+vim.keymap.set("n", "<Esc>", ":noh<CR>")
+vim.keymap.set("n", "<C-c>", ":noh<CR>")
