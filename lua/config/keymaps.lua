@@ -27,15 +27,42 @@ map("n", "<leader>e", "<cmd>Explore<CR>", {
   desc = "File explorer",
 })
 
-map("n", "<leader>sf", ":find ", {
-  desc = "Find file",
-  silent = false,
-})
+map("n", "<leader>sf", function()
+    MiniPick.builtin.files()
+  end,
+  { desc = "Find File" })
 
-map("n", "<leader>sg", ":grep ", {
-  desc = "Search project",
-  silent = false,
-})
+map("n", "\\", function()
+    MiniFiles.open()
+  end,
+  { desc = "Open FileTree" })
+
+map("n", "<leader>sg", function()
+    MiniPick.builtin.grep_live()
+  end,
+  { desc = "Search in Files" })
+
+map("n", "<leader>sr", function()
+    MiniPick.builtin.resume()
+  end,
+  { desc = "Resume Search" })
+
+map("n", "grR", ":lua MiniExtra.pickers.lsp({scope= \"references\"})<CR>",
+  { desc = "References (Picker)" })
+
+map("n", "grI", ":lua MiniExtra.pickers.lsp({scope= \"implementation\"})<CR>",
+  { desc = "Implementations (Picker)" })
+
+map("n", "<leader>as", function()
+    MiniSplitjoin.toggle()
+  end,
+  { desc = "Toggle Split/Join Args" })
+
+map("n", "<leader>cc", ":Pick colorschemes<CR>",
+  { desc = "Choose Colorscheme" })
+
+map("n", "<leader>to", ":TabProject ",
+  { desc = "New Tab" })
 
 map("n", "<leader>qo", "<cmd>copen<CR>", {
   desc = "Open quickfix",

@@ -1,16 +1,27 @@
-vim.diagnostic.config({
-  severity_sort = true,
-  underline = true,
-  signs = true,
+vim.pack.add({
+  "https://github.com/mason-org/mason.nvim",
+  "https://github.com/neovim/nvim-lspconfig",
+  "https://github.com/mason-org/mason-lspconfig.nvim",
+})
 
-  virtual_text = {
-    spacing = 2,
-    source = "if_many",
+require("mason").setup()
+
+require("mason-lspconfig").setup({
+  ensure_installed = {
+    "clangd",
+    "gopls",
+    "lua_ls",
   },
+})
 
-  float = {
-    border = "rounded",
-    source = true,
+vim.diagnostic.config({
+  virtual_text = {
+    severity = vim.diagnostic.severity.ERROR,
+  },
+  signs = {
+    severity = {
+      min = vim.diagnostic.severity.WARN,
+    },
   },
 })
 
@@ -144,53 +155,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
-
--- Configure LuaLS for editing Neovim configuration
-vim.lsp.config("lua_ls", {
-  settings = {
-    Lua = {
-      runtime = {
-        version = "LuaJIT",
-      },
-
-      workspace = {
-        checkThirdParty = false,
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
-})
-
--- Useful gopls defaults
-vim.lsp.config("gopls", {
-  settings = {
-    gopls = {
-      gofumpt = true,
-      staticcheck = true,
-      usePlaceholders = true,
-
-      analyses = {
-        unusedparams = true,
-        unusedwrite = true,
-      },
-    },
-  },
-})
-
--- nvim-lspconfig supplies the cmd, filetypes and root detection.
-local servers = {
-  "lua_ls",
-  "gopls",
-  "basedpyright",
-  "ts_ls",
-  "roslyn_ls",
-  "clangd",
-}
-
-for _, server in ipairs(servers) do
-  vim.lsp.enable(server)
-end

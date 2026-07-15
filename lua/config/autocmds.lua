@@ -41,3 +41,11 @@ vim.api.nvim_create_autocmd("FileType", {
     })
   end,
 })
+
+vim.api.nvim_create_user_command("TabProject", function(opts)
+  vim.cmd("tabnew")
+  vim.cmd("tcd " .. vim.fn.fnameescape(opts.args))
+end, {
+  nargs = 1,
+  complete = "dir",
+})

@@ -1,3 +1,4 @@
+vim.pack.add({"https://github.com/oonamo/ef-themes.nvim"})
 vim.opt.termguicolors = true
 
 require("ef-themes").setup({
