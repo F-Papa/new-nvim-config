@@ -32,6 +32,11 @@ map("n", "<leader>sf", function()
   end,
   { desc = "Find File" })
 
+map("n", "<leader>sb", function()
+    MiniPick.builtin.buffers()
+  end,
+  { desc = "Find Buffer" })
+
 map("n", "\\", function()
     MiniFiles.open()
   end,
@@ -97,7 +102,7 @@ map("n", "lc", "<cmd>lclose<CR>", {
 })
 
 -- Leave terminal mode
-map("t", "<Esc><Esc>", "<C-\\><C-n>", {
+map("t", "<Esc>", "<C-\\><C-n>", {
   desc = "Exit terminal mode",
 })
 

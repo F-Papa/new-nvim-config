@@ -28,6 +28,7 @@ require("mini.pick").setup({
 require("mini.surround").setup()
 require("mini.jump2d").setup()
 require("mini.files").setup()
+require("mini.icons").setup()
 require("mini.git").setup()
 require("mini.diff").setup()
 require("mini.ai").setup()
