@@ -1,30 +1,10 @@
 vim.pack.add({
   "https://github.com/nvim-mini/mini.nvim",
+  "https://github.com/ibhagwan/fzf-lua",
 })
 
 require("mini.pairs").setup()
-require("mini.pick").setup({
-  window = {
-    config = function()
-      local width = math.floor(vim.o.columns * 0.35)
-      local height = vim.o.lines - 2
-
-      return {
-        relative = "editor",
-        anchor = "NE",
-
-        width = width,
-        height = height,
-
-        row = 0,
-        col = vim.o.columns,
-
-        border = "single",
-      }
-    end,
-  },
-}
-)
+require("fzf-lua").setup({})
 require("mini.surround").setup()
 require("mini.jump2d").setup()
 require("mini.files").setup()

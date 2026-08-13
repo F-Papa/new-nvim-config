@@ -28,12 +28,12 @@ map("n", "<leader>e", "<cmd>Explore<CR>", {
 })
 
 map("n", "<leader>sf", function()
-    MiniPick.builtin.files()
+    require("fzf-lua").files()
   end,
   { desc = "Find File" })
 
 map("n", "<leader>sb", function()
-    MiniPick.builtin.buffers()
+    require("fzf-lua").buffers()
   end,
   { desc = "Find Buffer" })
 
@@ -43,28 +43,36 @@ map("n", "\\", function()
   { desc = "Open FileTree" })
 
 map("n", "<leader>sg", function()
-    MiniPick.builtin.grep_live()
+    require("fzf-lua").live_grep()
   end,
   { desc = "Search in Files" })
 
 map("n", "<leader>sr", function()
-    MiniPick.builtin.resume()
+    require("fzf-lua").resume()
   end,
   { desc = "Resume Search" })
 
-map("n", "grR", ":lua MiniExtra.pickers.lsp({scope= \"references\"})<CR>",
-  { desc = "References (Picker)" })
+map("n", "<leader>sm", function()
+    require("fzf-lua").builtin()
+  end,
+  { desc = "Search Menu" })
 
-map("n", "grI", ":lua MiniExtra.pickers.lsp({scope= \"implementation\"})<CR>",
-  { desc = "Implementations (Picker)" })
+map("n", "grR", function()
+    require("fzf-lua").lsp_references()
+  end, { desc = "References (Picker)" })
+
+map("n", "grI", function()
+    require("fzf-lua").lsp_implementations()
+  end, { desc = "Implementations (Picker)" })
 
 map("n", "<leader>as", function()
     MiniSplitjoin.toggle()
   end,
   { desc = "Toggle Split/Join Args" })
 
-map("n", "<leader>cc", ":Pick colorschemes<CR>",
-  { desc = "Choose Colorscheme" })
+map("n", "<leader>cc", function()
+    require("fzf-lua").colorschemes()
+  end, { desc = "Choose Colorscheme" })
 
 map("n", "<leader>to", ":TabProject ",
   { desc = "New Tab" })
